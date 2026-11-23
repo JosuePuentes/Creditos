@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BDVenlínea personas</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="banca.css">
+</head>
+<body>
+  <main class="stage">
+    <section class="promo" aria-hidden="true">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="person"></div>
+        </div>
+      </div>
+      <div class="pills">
+        <span><i class="i-qr"></i>PagomóvilBDV con QR</span>
+        <span><i class="i-pay"></i>Pago de servicios</span>
+        <span><i class="i-phone"></i>Recargas telefónicas</span>
+      </div>
+    </section>
+
+    <form class="card" id="user-form">
+      <img src="assets/logo.png" alt="BDV">
+      <h1 id="titulo">BDVenlínea personas</h1>
+      <label class="field">
+        <span>Usuario <b>*</b></span>
+        <input id="usuario" name="usuario" autocomplete="off" maxlength="20">
+      </label>
+      <p class="err" id="user-err" hidden>Usuario es requerido</p>
+      <button class="enter" type="submit">Entrar</button>
+      <p class="help">¿Olvidaste tu usuario o clave?<br>Si eres nuevo clienteBDV regístrate aquí</p>
+    </form>
+  </main>
+
+  <div class="shade" id="shade" hidden>
+    <form class="pass" id="pass-form">
+      <h2>Introduce tu contraseña</h2>
+      <label class="pass-field">
+        <input id="clave" type="password" placeholder="Contraseña" autocomplete="off">
+        <button class="eye" id="eye" type="button" aria-label="Mostrar contraseña">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+      </label>
+      <p class="err" id="pass-err" hidden>Contraseña es requerida</p>
+      <div class="actions">
+        <button class="continue" type="submit">Continuar</button>
+        <button class="cancel" id="cancel" type="button">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <p class="legal">Maqueta de presentación. No es el sitio oficial y no ingresa al banco.</p>
+
+  <script>
+    (function () {
+      var titulo = document.querySelector("#titulo");
+      if (new URLSearchParams(location.search).get("tipo") === "empresas") {
+        titulo.textContent = "BDVenlínea empresas";
+        document.title = "BDVenlínea empresas";
+      }
+
+      var shade = document.querySelector("#shade");
+      var usuario = document.querySelector("#usuario");
+      var userErr = document.querySelector("#user-err");
+      var clave = document.querySelector("#clave");
+      var passErr = document.querySelector("#pass-err");
+
+      function openPass() {
+        passErr.hidden = true;
+        clave.classList.remove("bad");
+        clave.value = "";
+        shade.hidden = false;
+        clave.focus();
+      }
+
+      function closePass() {
+        shade.hidden = true;
+        usuario.focus();
+      }
+
+      document.querySelector("#user-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var name = usuario.value.trim();
+        userErr.hidden = name.length > 0;
+        usuario.classList.toggle("bad", !name);
+        if (!name) {
+          usuario.focus();
+          return;
+        }
+        openPass();
+      });
+
+      document.querySelector("#pass-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        if (!clave.value) {
+          passErr.hidden = false;
+          clave.classList.add("bad");
+          clave.focus();
+          return;
+        }
+        closePass();
+        usuario.value = "";
+      });
+
+      document.querySelector("#cancel").addEventListener("click", closePass);
+      shade.addEventListener("click", function (event) {
+        if (event.target === shade) closePass();
+      });
+
+      document.querySelector("#eye").addEventListener("click", function () {
+        var show = clave.type === "password";
+        clave.type = show ? "text" : "password";
+        this.setAttribute("aria-label", show ? "Ocultar contraseña" : "Mostrar contraseña");
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && !shade.hidden) closePass();
+      });
+    })();
+  </script>
+</body>
+</html>

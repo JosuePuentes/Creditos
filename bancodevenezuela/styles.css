@@ -141,12 +141,17 @@ button, input, a { font-family: inherit; }
 .banca { position: relative; }
 
 .banca-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: var(--blue);
   color: #fff;
   border-radius: 6px;
   font-size: 18px;
   padding: 12px 28px;
   min-width: 210px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .banca-btn:hover,

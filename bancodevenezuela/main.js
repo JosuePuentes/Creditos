@@ -26,7 +26,7 @@
     toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
   });
 
-  Array.prototype.forEach.call(document.querySelectorAll(".nav-link, .banca-btn"), function (btn) {
+  Array.prototype.forEach.call(document.querySelectorAll(".nav-link"), function (btn) {
     btn.addEventListener("click", function (event) {
       event.stopPropagation();
       var item = btn.parentElement;
