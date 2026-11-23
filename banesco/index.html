@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Banesco Contigo</title>
+  <meta name="description" content="Home de presentación de Banesco Banco Universal.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <div class="promo-bar">
+    <p>Adquiere un punto de venta <strong>¡SIN COSTO!</strong> con nuestro aliado <em>nativa</em>. Válido hasta el 30 de noviembre de 2026.</p>
+    <button class="promo-go" type="button" data-modal data-title="Punto de venta sin costo" data-text="Afíliate como comercio y solicita un punto de venta con el aliado nativa. Promoción vigente hasta el 30 de noviembre de 2026. En el sitio oficial continúas la solicitud; esta pantalla es la maqueta de presentación.">Quiero mi POS</button>
+    <button class="promo-x" type="button" aria-label="Cerrar aviso">×</button>
+  </div>
+
+  <header class="site-header">
+    <div class="header-main">
+      <a class="logo" href="#inicio" data-view="home">
+        <img src="assets/logo.png" alt="Banesco">
+      </a>
+
+      <nav class="tabs" aria-label="Tipo de cliente">
+        <button class="tab active" type="button" data-menu="personas" aria-expanded="false">Personas</button>
+        <button class="tab" type="button" data-menu="empresas" aria-expanded="false">Empresas</button>
+      </nav>
+
+      <div class="header-tools">
+        <a class="tool" href="#agencias" data-view="agencias">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Ubícanos
+        </a>
+        <div class="country-wrap">
+          <button class="tool country-btn" type="button" aria-expanded="false">
+            <img src="assets/flag.png" alt="">
+            Banesco Venezuela
+            <span class="chev"></span>
+          </button>
+          <div class="country-pop">
+            <p>Estás viendo la maqueta de <strong>Banesco Venezuela</strong>.</p>
+          </div>
+        </div>
+        <button class="icon-btn" id="open-search" type="button" aria-label="Buscar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+        </button>
+        <button class="banca-btn" type="button" data-view="banca">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+          Banca en Línea
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mega" id="menu-personas" hidden>
+      <div class="mega-grid">
+        <div>
+          <h3>Banca Digital</h3>
+          <a href="#digital" data-view="digital">BanescOnline</a>
+          <a href="#digital" data-view="digital">BanescoMóvil</a>
+          <a href="#digital" data-view="digital">PagoMóvil</a>
+          <a href="#digital" data-view="digital">BanescoToken</a>
+          <a href="#digital" data-view="digital">Multipagos Banesco</a>
+          <a href="#digital" data-view="digital">Banca Telefónica</a>
+        </div>
+        <div>
+          <h3>Cuentas y Planes</h3>
+          <a href="#cuentas" data-view="cuentas">Cuenta Verde</a>
+          <a href="#cuentas" data-view="cuentas">Cuenta de Ahorro</a>
+          <a href="#cuentas" data-view="cuentas">Cuenta Corriente</a>
+          <a href="#cuentas" data-view="cuentas">Cuenta de Pensionados</a>
+          <a href="#cuentas" data-view="cuentas">Mi Primer Plan</a>
+          <a href="#cuentas" data-view="cuentas">Plan Independiente</a>
+        </div>
+        <div>
+          <h3>Tarjetas</h3>
+          <a href="#tarjetas" data-view="tarjetas">Visa Clásica</a>
+          <a href="#tarjetas" data-view="tarjetas">Visa Platinum</a>
+          <a href="#tarjetas" data-view="tarjetas">MasterCard Black</a>
+          <a href="#tarjetas" data-view="tarjetas">Débito Maestro</a>
+        </div>
+        <div>
+          <h3>Créditos</h3>
+          <a href="#creditos" data-view="creditos">ExtraCrédito</a>
+          <a href="#creditos" data-view="creditos">CrédiMujer</a>
+          <a href="#creditos" data-view="creditos">CrediCarro</a>
+          <a href="#creditos" data-view="creditos">Microcréditos</a>
+          <a href="#creditos" data-view="creditos">Crédito agrícola</a>
+          <h3>También</h3>
+          <a href="#servicios" data-view="servicios">Servicios e inversiones</a>
+          <a href="#privada" data-view="privada">Banca Privada</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega" id="menu-empresas" hidden>
+      <div class="mega-grid">
+        <div>
+          <h3>Banca Digital</h3>
+          <a href="#empresas" data-view="empresas">BanescOnline Empresa</a>
+          <a href="#empresas" data-view="empresas">BanescOnline Fideicomiso</a>
+          <a href="#empresas" data-view="empresas">BanescoMóvil</a>
+          <a href="#empresas" data-view="empresas">PagoMóvil</a>
+        </div>
+        <div>
+          <h3>Cobros y pagos</h3>
+          <a href="#empresas" data-view="empresas">Punto de venta</a>
+          <a href="#empresas" data-view="empresas">Multipagos</a>
+          <a href="#empresas" data-view="empresas">Nómina</a>
+          <a href="#empresas" data-view="empresas">Pago a proveedores</a>
+        </div>
+        <div>
+          <h3>Financiamiento</h3>
+          <a href="#creditos" data-view="creditos">Línea de crédito</a>
+          <a href="#creditos" data-view="creditos">Préstamo comercial</a>
+          <a href="#creditos" data-view="creditos">Crédito para emprendedores</a>
+          <a href="#servicios" data-view="servicios">Fideicomiso</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <div class="view view-home active" id="view-home" data-tab="personas">
+      <section class="hero" aria-roledescription="carrusel" aria-label="Campañas">
+        <div class="slides">
+          <article class="slide slide-ticket">
+            <img src="assets/hero-ticket.webp" alt="">
+            <div class="slide-copy light">
+              <h2>¡PÁSALA y gana con <em>Ticket Premiado</em>!</h2>
+              <p>Programa aprobado por SUDEBAN | Válido desde el 10 al 30 de noviembre de 2026</p>
+              <button class="btn btn-light" type="button" data-modal data-title="Ticket Premiado" data-text="Paga con tus tarjetas Banesco y participa en Ticket Premiado. El programa está aprobado por SUDEBAN y aplica del 10 al 30 de noviembre de 2026. Esta ficha es informativa para la presentación.">Conoce más</button>
+            </div>
+          </article>
+          <article class="slide slide-awards">
+            <img src="assets/hero-awards.webp" alt="">
+            <div class="slide-copy light">
+              <h2>Fuimos galardonados en los Global Private Banking Awards</h2>
+              <p>Un hito internacional que respalda nuestra solidez, rentabilidad y compromiso sostenible con el país.</p>
+              <button class="btn btn-light" type="button" data-view="somos">Entérate de más</button>
+            </div>
+          </article>
+          <article class="slide slide-dani">
+            <img src="assets/hero-dani.webp" alt="">
+            <div class="slide-copy">
+              <h2>Dani lo hace fácil: escríbele como a un amigo.</h2>
+              <p>Te reconoce, te entiende y te resuelve en cada chat.</p>
+              <button class="btn btn-green" type="button" id="open-dani-hero">Quiero saber más</button>
+            </div>
+          </article>
+        </div>
+        <button class="slider-btn prev" type="button" aria-label="Anterior">‹</button>
+        <button class="slider-btn next" type="button" aria-label="Siguiente">›</button>
+        <div class="dots">
+          <button type="button" aria-label="Campaña 1" aria-current="true"></button>
+          <button type="button" aria-label="Campaña 2"></button>
+          <button type="button" aria-label="Campaña 3"></button>
+        </div>
+      </section>
+
+      <section class="assist" aria-label="Buscador">
+        <div class="assist-card">
+          <h2>¿En qué podemos ayudarte?</h2>
+          <form class="finder" id="finder">
+            <label class="sr" for="q">Estoy buscando</label>
+            <input id="q" type="search" placeholder="Estoy buscando..." autocomplete="off">
+            <button type="submit" aria-label="Buscar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+            </button>
+            <div class="results" id="results" hidden></div>
+          </form>
+        </div>
+      </section>
+
+      <section class="shortcuts" aria-label="Accesos rápidos">
+        <div class="wrap short-grid">
+          <button type="button" data-view="agencias">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 54s16-14 16-26a16 16 0 1 0-32 0c0 12 16 26 16 26z"/><circle cx="32" cy="28" r="6"/></svg>
+            Agencias operativas
+          </button>
+          <button type="button" data-view="empresas">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="14" y="12" width="28" height="40" rx="3"/><path d="M20 22h16M20 30h16M20 38h8"/><rect x="38" y="28" width="14" height="18" rx="2"/></svg>
+            Afiliado comercial
+          </button>
+          <button type="button" data-view="tarjetas">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><rect x="8" y="18" width="36" height="24" rx="3"/><rect x="22" y="26" width="32" height="22" rx="3"/><circle cx="44" cy="40" r="7"/><path d="M41 40h6M44 37v6"/></svg>
+            Descuentos al pagar con tus Tarjetas
+          </button>
+          <button type="button" data-modal data-title="Banesco Innova" data-text="Banesco Innova es el programa para impulsar ideas, emprendimiento y soluciones digitales. En la presentación se muestra como ficha informativa.">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 8l4 12 12 4-12 4-4 12-4-12-12-4 12-4z"/><path d="M18 40l2 6 6 2-6 2-2 6-2-6-6-2 6-2z"/></svg>
+            Banesco Innova
+          </button>
+          <button type="button" data-modal data-title="Todoticket" data-text="Todoticket concentra beneficios de alimentación y consumo asociados a Banesco. En el sitio oficial el acceso continúa en el portal del aliado.">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 20h40v8a6 6 0 0 0 0 12v8H12v-8a6 6 0 0 0 0-12z"/><path d="M32 20v28"/></svg>
+            Todoticket
+          </button>
+          <button type="button" data-view="tasas">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 46V28M26 46V18M38 46V32M50 46V22"/><path d="M10 50h44"/></svg>
+            Límites diarios
+          </button>
+          <button type="button" data-view="tasas">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 24h22M34 16l8 8-8 8"/><path d="M46 40H24M30 32l-8 8 8 8"/></svg>
+            Tasas operaciones cambiarias
+          </button>
+        </div>
+      </section>
+
+      <section class="stories" aria-label="Contenido destacado">
+        <article class="story story-navy">
+          <div>
+            <h3>Las mejores historias a un toque de distancia</h3>
+            <p>Descarga gratis tu próximo libro en la Biblioteca Digital Banesco</p>
+            <button class="btn btn-green" type="button" data-view="biblioteca">Descarga gratis</button>
+          </div>
+          <div class="phone" aria-hidden="true">
+            <div class="shelf"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="shelf"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="shelf"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </article>
+
+        <div class="story-row">
+          <article class="story story-green">
+            <div>
+              <h3>¡Únete a nuestro equipo!</h3>
+              <p>Tenemos el lugar correcto para ti</p>
+              <button class="btn btn-light" type="button" data-view="empleos">Postúlate</button>
+            </div>
+          </article>
+          <article class="story story-white">
+            <div>
+              <h3>Mantén tu expediente al día</h3>
+              <p>La clave para brindarte siempre un mejor servicio.</p>
+              <button class="btn btn-green" type="button" data-modal data-title="Actualiza tu expediente" data-text="Mantener tus datos y recaudos vigentes permite abrir productos, actualizar límites y recibir una atención más precisa. En una agencia o por Banca en Línea puedes consultar qué documentos hacen falta.">Conoce más</button>
+            </div>
+          </article>
+        </div>
+
+        <article class="story story-secure">
+          <div>
+            <h3>Somos un banco 100% confiable</h3>
+            <p>Seguimos innovando para garantizar tu seguridad</p>
+            <button class="btn btn-green" type="button" data-view="seguridad">Conoce cómo</button>
+          </div>
+          <div class="shield" aria-hidden="true">
+            <svg viewBox="0 0 80 80"><path d="M40 8l24 8v20c0 16-10 26-24 32C26 62 16 52 16 36V16z"/><path d="M30 40l7 7 14-16"/></svg>
+          </div>
+        </article>
+      </section>
+
+      <section class="help-band" id="ayuda-home">
+        <div class="wrap help-inner">
+          <div>
+            <h2>¿Necesitas ayuda?</h2>
+            <p>Estamos a tu disposición en todos nuestros canales</p>
+          </div>
+          <button class="btn btn-line" type="button" data-view="ayuda">Contáctanos</button>
+        </div>
+      </section>
+    </div>
+
+    <section class="view page" id="view-digital" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Personas / Banca Digital</p>
+        <h1>Banca Digital</h1>
+        <p class="lead">Opera, consulta y paga desde BanescOnline, BanescoMóvil o con Dani, sin ir a la agencia.</p>
+        <div class="product-grid">
+          <button type="button" data-modal data-title="BanescOnline" data-text="Banca por internet para consultar saldos, transferir, pagar servicios y administrar tarjetas. El ingreso real se hace en el portal oficial; aquí solo se muestra la maqueta.">BanescOnline<span>Consultas, pagos y transferencias</span></button>
+          <button type="button" data-modal data-title="BanescoMóvil" data-text="La app reúne PagoMóvil, consultas, tarjetas y la clave dinámica. Descárgala desde las tiendas oficiales cuando uses el servicio real.">BanescoMóvil<span>La app del día a día</span></button>
+          <button type="button" data-modal data-title="PagoMóvil" data-text="Envía y recibe bolívares con el número de teléfono afiliado a tu cuenta. Revisa siempre el límite diario antes de operar.">PagoMóvil<span>Pagos al instante</span></button>
+          <button type="button" data-modal data-title="BanescoToken" data-text="Clave dinámica para autorizar operaciones sensibles en Banca en Línea y en la app.">BanescoToken<span>Clave dinámica</span></button>
+          <button type="button" data-modal data-title="Multipagos Banesco" data-text="Paga varios servicios y recaudos desde un solo flujo, en banca en línea o en la app.">Multipagos<span>Servicios en un solo lugar</span></button>
+          <button type="button" data-modal data-title="Banca Telefónica" data-text="Canal de voz para consultas y operaciones asistidas cuando no puedes usar la app.">Banca Telefónica<span>Atención por teléfono</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-cuentas" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Personas / Cuentas y Planes</p>
+        <h1>Cuentas y Planes</h1>
+        <p class="lead">Elige la cuenta según cómo mueves tu dinero: ahorro, corriente, pensión o el primer producto de un menor.</p>
+        <div class="product-grid">
+          <button type="button" data-modal data-title="Cuenta Verde" data-text="Cuenta pensada para quien prefiere operar por canales digitales, con menos uso de talonario y más movimientos en línea.">Cuenta Verde<span>Digital y de bajo consumo de papel</span></button>
+          <button type="button" data-modal data-title="Cuenta de Ahorro" data-text="Para guardar y disponer de tu dinero con una tarjeta de débito y acceso a Banca Digital.">Cuenta de Ahorro<span>Reserva y uso diario</span></button>
+          <button type="button" data-modal data-title="Cuenta Corriente" data-text="Hay versiones con y sin intereses, y una corriente electrónica. Sirve para pagos frecuentes y manejo comercial de personas.">Cuenta Corriente<span>Con o sin intereses</span></button>
+          <button type="button" data-modal data-title="Cuenta de Pensionados" data-text="Recibe la pensión y administra el saldo con débito y canales digitales.">Cuenta de Pensionados<span>Para quien cobra por el IVSS</span></button>
+          <button type="button" data-modal data-title="Mi Primer Plan" data-text="Cuenta para menores de edad, abierta con su representante. Incluye educación financiera y control del adulto responsable.">Mi Primer Plan<span>Cuenta para menores</span></button>
+          <button type="button" data-modal data-title="Plan Independiente" data-text="Combina cuenta y medios de pago para profesionales y trabajadores por cuenta propia.">Plan Independiente<span>Para tu actividad propia</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-tarjetas" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Personas / Tarjetas</p>
+        <h1>Tarjetas</h1>
+        <p class="lead">Crédito Visa y MasterCard, débito Maestro y la primera tarjeta para quien está empezando.</p>
+        <div class="product-grid">
+          <button type="button" data-modal data-title="Visa y MasterCard" data-text="Niveles Clásica, Dorada, Platinum, Signature y Black. El nivel cambia límites, seguros y accesos a salas o descuentos. La asignación depende de la evaluación del banco.">Crédito Visa y MasterCard<span>Del nivel clásico a Black</span></button>
+          <button type="button" data-modal data-title="Mi Primera Tarjeta" data-text="Visa de entrada para construir historial, con un límite acorde al perfil de quien empieza.">Mi Primera Tarjeta<span>Para empezar a usar crédito</span></button>
+          <button type="button" data-modal data-title="Tarjeta amparada" data-text="Un adicional sobre la tarjeta principal, para un familiar, con el cupo que defina el titular.">Tarjeta amparada<span>Un adicional de tu cupo</span></button>
+          <button type="button" data-modal data-title="Débito Maestro" data-text="Maestro, Gold, Electrónica, Nómina, TEA y Pensionados. El plástico se usa en comercios y cajeros con el saldo de la cuenta.">Débito Maestro<span>Compras con tu saldo</span></button>
+          <button type="button" data-modal data-title="Descuentos" data-text="Alianzas vigentes al pagar con tarjetas Banesco. Las marcas y el porcentaje cambian por temporada; conviene ver el listado oficial del mes.">Descuentos<span>Alianzas del mes</span></button>
+          <button type="button" data-modal data-title="Clave de avance" data-text="Clave distinta a la de compras para retirar efectivo en cajeros. No la compartas ni la anotes junto a la tarjeta.">Clave de avance<span>Retiros en cajero</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-creditos" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Personas / Créditos</p>
+        <h1>Créditos</h1>
+        <p class="lead">Efectivo, vehículo, emprendimiento y campo. Cada producto pide evaluación, recaudos y una tasa vigente.</p>
+        <div class="credit-hero">
+          <div>
+            <h2>Financiamiento a la medida de lo que estás construyendo</h2>
+            <p>Revisa el destino del crédito, el plazo y los recaudos antes de pedir la cita o la solicitud en línea.</p>
+          </div>
+          <button class="btn btn-light" type="button" data-view="ayuda">Hablar con un asesor</button>
+        </div>
+        <div class="product-grid">
+          <button type="button" data-modal data-title="ExtraCrédito en efectivo" data-text="Dinero para un gasto previsto, abonado en cuenta y pagado en cuotas. El monto depende de los ingresos y de la política vigente de crédito.">ExtraCrédito<span>Efectivo en cuotas</span></button>
+          <button type="button" data-modal data-title="Microcréditos" data-text="Montos menores para capital de trabajo de un negocio pequeño o una actividad que está arrancando.">Microcréditos<span>Para un negocio pequeño</span></button>
+          <button type="button" data-modal data-title="CrédiMujer" data-text="Línea orientada a mujeres que producen, comercian o prestan un servicio y necesitan financiar su actividad.">CrédiMujer<span>Crédito para emprendedoras</span></button>
+          <button type="button" data-modal data-title="CrediCarro" data-text="Financiamiento para la compra de un vehículo, con inicial, plazo y garantía según el concesionario y la evaluación.">CrediCarro<span>Para comprar vehículo</span></button>
+          <button type="button" data-modal data-title="Crédito para emprendedores" data-text="Apoya inventario, equipos o el local de un emprendimiento formalizado. Pide RIF, flujo de caja sencillo y recaudos de identidad.">Emprendedores<span>Inventario, equipo o local</span></button>
+          <button type="button" data-modal data-title="Crédito agrícola" data-text="Préstamo o línea para el ciclo del campo: siembra, cosecha, animales o maquinaria. El destino debe coincidir con la actividad agropecuaria.">Sector agrícola<span>Siembra, cosecha y equipos</span></button>
+          <button type="button" data-modal data-title="Línea de crédito" data-text="Un cupo que se usa y se repone a medida que abonas. Útil cuando el negocio no necesita todo el dinero el mismo día.">Línea de crédito<span>Cupo reusable</span></button>
+          <button type="button" data-modal data-title="Préstamo comercial" data-text="Financiamiento para empresas: capital de trabajo o un proyecto concreto, con garantías y estados financieros.">Préstamo comercial<span>Capital de trabajo</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-servicios" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Personas / Servicios e inversiones</p>
+        <h1>Servicios e inversiones</h1>
+        <p class="lead">Cobertura cambiaria, remesas, fideicomiso y cobros para quien también vende.</p>
+        <div class="product-grid">
+          <button type="button" data-modal data-title="Títulos de cobertura" data-text="Instrumento para cubrir variación cambiaria según las condiciones publicadas por el banco y la normativa vigente.">Títulos de cobertura<span>Cobertura cambiaria</span></button>
+          <button type="button" data-modal data-title="Depósitos a la vista" data-text="Dinero disponible en cuenta, sin plazo fijo, para pagos y retiros del día a día.">Depósitos a la vista<span>Disponible cuando lo necesitas</span></button>
+          <button type="button" data-modal data-title="Remesas" data-text="Recepción de dinero enviado desde el exterior por los corredores habilitados. El pagador y el monto deben coincidir con el documento de identidad.">Remesas internacionales<span>Dinero desde el exterior</span></button>
+          <button type="button" data-modal data-title="Fideicomiso" data-text="Administración de un patrimonio con un fin definido: garantía, administración o inversión, bajo contrato.">Fideicomiso<span>Patrimonio con un fin</span></button>
+          <button type="button" data-modal data-title="Pago de impuestos" data-text="Cancelación de tributos y contribuciones especiales desde los canales digitales habilitados.">Impuestos<span>Tributos y contribuciones</span></button>
+          <button type="button" data-modal data-title="Cobro a terceros" data-text="El banco recauda por cuenta de una empresa o institución y te reporta lo recibido.">Cobro a terceros<span>Recaudación</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-privada" data-tab="personas" hidden>
+      <div class="wrap narrow">
+        <p class="crumb">Personas / Bancas especializadas</p>
+        <h1>Banca Privada</h1>
+        <p class="lead">Acompañamiento para patrimonios que necesitan un banquero, inversiones y una relación más cercana.</p>
+        <div class="note-card">
+          <h2>Reconocimiento 2026</h2>
+          <p>Banesco fue galardonado en los Global Private Banking Awards por su estrategia de crecimiento. En esta maqueta el dato se presenta tal como aparece en el home público.</p>
+          <button class="btn btn-green" type="button" data-view="ayuda">Quiero que me contacten</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-empresas" data-tab="empresas" hidden>
+      <div class="wrap">
+        <p class="crumb">Empresas</p>
+        <h1>Banesco Empresas</h1>
+        <p class="lead">Cobrar, pagar nómina, operar el fideicomiso y financiar el capital de trabajo desde BanescOnline Empresa.</p>
+        <div class="product-grid">
+          <button type="button" data-modal data-title="BanescOnline Empresa" data-text="Usuarios con roles, aprobaciones y consultas de las cuentas de la compañía. Cada operador entra con su propia clave.">BanescOnline Empresa<span>Varios usuarios, un control</span></button>
+          <button type="button" data-modal data-title="Punto de venta" data-text="Afiliación comercial para cobrar con tarjeta. Hay una promoción de POS sin costo con el aliado nativa, vigente hasta el 30 de noviembre de 2026.">Punto de venta<span>Cobra con tarjeta</span></button>
+          <button type="button" data-modal data-title="Nómina" data-text="Pago de sueldos a las cuentas de los trabajadores, con archivo y comprobantes de la empresa.">Nómina<span>Sueldos en lote</span></button>
+          <button type="button" data-modal data-title="Pago a proveedores" data-text="Transferencias y órdenes de pago a los proveedores habituales, con el flujo de aprobación de la empresa.">Proveedores<span>Pagos con aprobación</span></button>
+          <button type="button" data-modal data-title="Multipagos" data-text="Cobro en línea para quien vende por web o por redes, integrado a los canales Banesco.">Multipagos<span>Cobro en línea</span></button>
+          <button type="button" data-modal data-title="Fideicomiso" data-text="BanescOnline Fideicomiso permite a la empresa y al fideicomitente seguir el patrimonio administrado.">Fideicomiso<span>Seguimiento del patrimonio</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-agencias" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Atención / Agencias</p>
+        <h1>Agencias operativas</h1>
+        <p class="lead">Zonas de atención para la presentación. El directorio con direcciones y horarios está en el sitio oficial.</p>
+        <div class="zone-grid" id="zonas">
+          <article><h2>Caracas</h2><p>Agencias y cajeros en el área metropolitana.</p></article>
+          <article><h2>Miranda</h2><p>Cobertura en el este y las ciudades del estado.</p></article>
+          <article><h2>Zulia</h2><p>Atención en Maracaibo y la costa occidental.</p></article>
+          <article><h2>Carabobo</h2><p>Valencia y la región central.</p></article>
+          <article><h2>Lara</h2><p>Barquisimeto y el centroccidente.</p></article>
+          <article><h2>Anzoátegui</h2><p>Barcelona, Puerto La Cruz y el oriente.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-tasas" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Información de interés / Tasas</p>
+        <h1>Tasas y límites</h1>
+        <p class="lead">La maqueta no publica la tasa del día. En el banco, estos valores se actualizan en el tablero oficial.</p>
+        <div class="rate-table">
+          <div><h2>Mesa de cambio</h2><p>USD —</p><p>EUR —</p></div>
+          <div><h2>Menudeo</h2><p>Compra —</p><p>Venta —</p></div>
+          <div><h2>Límite PagoMóvil</h2><p>Diario —</p><p>Por operación —</p></div>
+          <div><h2>Tasas activas</h2><p>Crédito — %</p><p>Tarjeta — %</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-biblioteca" data-tab="personas" hidden>
+      <div class="wrap narrow">
+        <p class="crumb">Corporativo / Biblioteca Digital</p>
+        <h1>Biblioteca Digital</h1>
+        <p class="lead">Libros gratuitos para leer desde el teléfono. En el sitio oficial la descarga abre el catálogo; aquí ves cómo está presentada la campaña.</p>
+        <ul class="book-list">
+          <li><strong>Cuento y novela corta</strong><span>Lecturas breves para el trayecto.</span></li>
+          <li><strong>Oficios y emprendimiento</strong><span>Ideas prácticas para quien produce.</span></li>
+          <li><strong>Historia de Venezuela</strong><span>Títulos de consulta general.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="view page" id="view-empleos" data-tab="personas" hidden>
+      <div class="wrap narrow">
+        <p class="crumb">Corporativo / Empleos</p>
+        <h1>Únete al equipo</h1>
+        <p class="lead">Banesco publica vacantes de agencias, tecnología y áreas de apoyo. Esta ficha no recibe currículos.</p>
+        <div class="note-card">
+          <h2>Cómo sería el proceso</h2>
+          <p>Eliges la vacante, cargas el currículo en el portal de empleos y el equipo de selección escribe si el perfil avanza. Para la presentación, el botón confirma que viste el recorrido.</p>
+          <button class="btn btn-green" type="button" data-modal data-title="Postulación de muestra" data-text="No se envió ningún currículo. En el proceso real la postulación se hace en el portal de empleos de Banesco.">Ver vacantes de muestra</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-seguridad" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Por tu seguridad</p>
+        <h1>Consejos para tus productos</h1>
+        <div class="product-grid">
+          <article class="tip"><h2>Clave solo tuya</h2><p>El banco no pide la clave completa ni el token por teléfono, por mensaje ni por redes.</p></article>
+          <article class="tip"><h2>Revisa el candado</h2><p>Entra a Banca en Línea escribiendo la dirección oficial, no desde un enlace de un mensaje.</p></article>
+          <article class="tip"><h2>Tarjeta a la vista</h2><p>Tapa el teclado en el cajero y no pierdas de vista la tarjeta en el punto de venta.</p></article>
+          <article class="tip"><h2>Avisa si viajas</h2><p>La notificación de viaje evita que un consumo en el exterior se detenga por seguridad.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-ayuda" data-tab="personas" hidden>
+      <div class="wrap">
+        <p class="crumb">Atención al cliente</p>
+        <h1>Contáctanos</h1>
+        <p class="lead">Elige el canal. El formulario no envía datos a ningún servidor: sirve para mostrar el recorrido en la presentación.</p>
+        <form class="contact-form" id="contact-form">
+          <label>Nombre <input name="nombre" required></label>
+          <label>Correo <input name="correo" type="email" required></label>
+          <label>Mensaje <textarea name="mensaje" rows="4" required></textarea></label>
+          <button class="btn btn-green" type="submit">Enviar mensaje</button>
+          <p class="form-note" hidden id="contact-note">Listo. El mensaje se quedó en esta pantalla y no salió del navegador.</p>
+        </form>
+        <div class="product-grid">
+          <article class="tip"><h2>Dani</h2><p>Asistente del sitio para dudas de productos, horarios y canales.</p></article>
+          <article class="tip"><h2>Defensor del cliente</h2><p>Si la respuesta de la agencia no resolvió el caso, existe una instancia de defensa del usuario bancario.</p></article>
+          <article class="tip"><h2>Reclamos</h2><p>Guarda el número de requerimiento. Sirve para hacer seguimiento.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="view page" id="view-somos" data-tab="personas" hidden>
+      <div class="wrap narrow">
+        <p class="crumb">Corporativo / Somos Banesco</p>
+        <h1>Somos Banesco</h1>
+        <p class="lead">Banesco Banco Universal atiende a personas y empresas en Venezuela, con banca digital, agencias y banca privada.</p>
+        <p>En 2026 el home público destaca el premio de los Global Private Banking Awards por la estrategia de crecimiento, junto con las campañas de Ticket Premiado y del asistente Dani.</p>
+        <p>RIF J-07013380-5. Esta página es una maqueta de presentación y no sustituye al sitio oficial.</p>
+      </div>
+    </section>
+
+    <section class="view page" id="view-prensa" data-tab="personas" hidden>
+      <div class="wrap narrow">
+        <p class="crumb">Corporativo / Sala de prensa</p>
+        <h1>Sala de prensa</h1>
+        <article class="press">
+          <h2>Premio por la estrategia de crecimiento</h2>
+          <p>El home anuncia el galardón en los Global Private Banking Awards y lo presenta como un respaldo a la solidez y al compromiso con el país.</p>
+        </article>
+        <article class="press">
+          <h2>Ticket Premiado, noviembre 2026</h2>
+          <p>Campaña vigente del 10 al 30 de noviembre de 2026, con aprobación de SUDEBAN, para quienes pagan con tarjetas Banesco.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="view page" id="view-banca" data-tab="personas" hidden>
+      <div class="wrap login-wrap">
+        <form class="login-card" id="login-form">
+          <img src="assets/logo.png" alt="Banesco">
+          <h1>Banca en Línea</h1>
+          <p>BanescOnline · acceso de demostración</p>
+          <label>Usuario <input name="usuario" autocomplete="off" required></label>
+          <label>Clave <input name="clave" type="password" autocomplete="off" required></label>
+          <button class="btn btn-green" type="submit">Ingresar</button>
+          <p class="form-note" id="login-note" hidden>Esta clave no se envió ni se guardó. En el banco, el ingreso ocurre solo en el portal oficial.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h2>Corporativo</h2>
+        <a href="#somos" data-view="somos">Somos Banesco</a>
+        <a href="#biblioteca" data-view="biblioteca">Biblioteca Digital</a>
+        <a href="#prensa" data-view="prensa">Sala de Prensa</a>
+        <a href="#empleos" data-view="empleos">Empleos Banesco</a>
+        <a href="#somos" data-view="somos">Banesco Internacional</a>
+      </div>
+      <div>
+        <h2>Atención al cliente</h2>
+        <button type="button" id="open-dani-foot">DANI Asistente virtual</button>
+        <a href="#agencias" data-view="agencias">Agencias Banesco</a>
+        <a href="#ayuda" data-view="ayuda">Proveedores Banesco</a>
+        <a href="#somos" data-view="somos">Prevención LC/FT/FPADM</a>
+        <a href="#ayuda" data-view="ayuda">Requerimientos y Reclamos</a>
+        <a href="#ayuda" data-view="ayuda">Defensor del Cliente</a>
+        <a href="#seguridad" data-view="seguridad">Notificación de viajes</a>
+        <a href="#banca" data-view="banca">Gestión de claves</a>
+      </div>
+      <div>
+        <h2>Información de interés</h2>
+        <a href="#tasas" data-view="tasas">Límites diarios</a>
+        <a href="#tasas" data-view="tasas">Sistema de Mercado Cambiario</a>
+        <a href="#ayuda" data-view="ayuda">Calendario bancario</a>
+        <a href="#digital" data-view="digital">Descargas</a>
+      </div>
+      <div>
+        <h2>Tasas, cargos y tarifas</h2>
+        <a href="#tasas" data-view="tasas">Tasas activas</a>
+        <a href="#tasas" data-view="tasas">Tasas pasivas personas</a>
+        <a href="#tasas" data-view="tasas">Tasas pasivas empresas</a>
+        <a href="#tasas" data-view="tasas">Cargos, tarifas y comisiones</a>
+      </div>
+      <div>
+        <h2>Por tu seguridad</h2>
+        <a href="#seguridad" data-view="seguridad">Consejos para tus productos financieros</a>
+      </div>
+    </div>
+    <p class="legal">Maqueta de presentación · Banesco Banco Universal, C.A. RIF J-07013380-5. No es el sitio oficial y no realiza operaciones bancarias.</p>
+  </footer>
+
+  <button class="dani-launcher" type="button" aria-expanded="false" aria-label="Abrir chat DANI">
+    <span>Dani</span>
+  </button>
+  <section class="dani-panel" hidden aria-label="Chat Dani">
+    <header>
+      <strong>Dani</strong>
+      <span>Asistente de la maqueta</span>
+      <button type="button" class="dani-close" aria-label="Cerrar chat">×</button>
+    </header>
+    <div class="dani-log" id="dani-log"></div>
+    <form class="dani-form" id="dani-form">
+      <label class="sr" for="dani-q">Mensaje</label>
+      <input id="dani-q" placeholder="Escríbele como a un amigo" autocomplete="off">
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

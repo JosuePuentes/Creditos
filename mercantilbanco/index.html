@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personas - Mercantil Banco</title>
+  <meta name="description" content="Home de presentación de Mercantil Banco, personas.">
+  <link rel="icon" href="assets/logo-infinito.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio" data-view="home" aria-label="Mercantil Banco">
+      <img src="assets/logo-100-white.svg" alt="Mercantil 100">
+    </a>
+    <div class="top-tools">
+      <button class="round" id="open-search" type="button" aria-label="Buscar">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>
+      </button>
+      <button class="round" id="access" type="button" aria-label="Accesibilidad" aria-pressed="false">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M4 9h16M12 9v11M12 13l-5 7M12 13l5 7"/></svg>
+      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="rail" id="rail">
+      <button class="mia-card" type="button" id="open-mia">
+        <span class="bubble">Soy MIA<br>¿Te ayudo?</span>
+        <svg class="avatar" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="58" fill="#e8f3fb"/>
+          <circle cx="60" cy="60" r="54" fill="none" stroke="#9ec3e4" stroke-width="2"/>
+          <path d="M28 108c4-22 16-34 32-34s28 12 32 34" fill="#f2c9a0"/>
+          <path d="M34 58c2-24 14-38 26-38 14 0 24 12 26 32-8 6-16 8-26 8s-20-4-26-2z" fill="#6b3a22"/>
+          <path d="M38 78c6 16 12 24 22 24s16-8 22-24c-8 8-16 12-22 12s-14-4-22-12z" fill="#f2c9a0"/>
+          <circle cx="50" cy="70" r="2.2" fill="#3a2a22"/>
+          <circle cx="70" cy="70" r="2.2" fill="#3a2a22"/>
+          <path d="M54 80c4 3 8 3 12 0" fill="none" stroke="#c47b6a" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M36 96h48l-4 18H40z" fill="#f4f7fb"/>
+          <path d="M40 96h8l2 18h-8zM52 96h8l1 18h-8zM64 96h8l0 18h-8zM76 96h8l-2 18h-8z" fill="#f08a2a"/>
+          <path d="M48 96h6l1 18h-6zM66 96h6l0 18h-6z" fill="#1f6fbf"/>
+        </svg>
+      </button>
+
+      <div class="tabs" role="tablist" aria-label="Tipo de cliente">
+        <button class="tab active" type="button" data-tab="personas">Personas</button>
+        <button class="tab" type="button" data-tab="empresas">Empresas</button>
+      </div>
+
+      <button class="pill pill-blue" type="button" data-view="banca">Mercantil en Línea <i>→</i></button>
+      <button class="pill pill-teal" type="button" data-view="cliente">Hazte Cliente <i>↗</i></button>
+      <button class="pill pill-orange" type="button" data-view="pagos">Portal de Pagos <i>↗</i></button>
+
+      <nav class="rail-nav" aria-label="Menú">
+        <div class="acc" data-panel="personas">
+          <button type="button" aria-expanded="false"><span class="ico">▣</span> Productos <b>›</b></button>
+          <div class="sub" hidden>
+            <a href="#cuentas" data-view="cuentas">Cuentas</a>
+            <a href="#tarjetas" data-view="tarjetas">Tarjetas</a>
+            <a href="#creditos" data-view="creditos">Créditos</a>
+            <a href="#divisas" data-view="divisas">Envío de Divisas</a>
+            <a href="#pos" data-view="pos">Puntos de venta</a>
+            <a href="#inversiones" data-view="inversiones">Inversiones</a>
+            <a href="#fideicomiso" data-view="fideicomiso">Fideicomisos</a>
+          </div>
+        </div>
+        <div class="acc" data-panel="personas">
+          <button type="button" aria-expanded="false"><span class="ico">▤</span> Servicios Digitales <b>›</b></button>
+          <div class="sub" hidden>
+            <a href="#digital" data-view="digital">Mercantil en Línea</a>
+            <a href="#digital" data-view="digital">App Mercantil</a>
+            <a href="#digital" data-view="digital">Pago móvil</a>
+            <a href="#pagos" data-view="pagos">Portal de Pagos</a>
+          </div>
+        </div>
+        <div class="acc" data-panel="personas">
+          <button type="button" aria-expanded="false"><span class="ico">☰</span> Conoce <b>›</b></button>
+          <div class="sub" hidden>
+            <a href="#conoce" data-view="conoce">Aprende con Mercantil</a>
+            <a href="#seguridad" data-view="seguridad">Ciberseguridad</a>
+            <a href="#prensa" data-view="prensa">Sala de prensa</a>
+          </div>
+        </div>
+        <div class="acc" data-panel="empresas">
+          <button type="button" aria-expanded="false"><span class="ico">▣</span> Empresas <b>›</b></button>
+          <div class="sub" hidden>
+            <a href="#empresas" data-view="empresas">Punto de venta</a>
+            <a href="#empresas" data-view="empresas">Nómina</a>
+            <a href="#fideicomiso" data-view="fideicomiso">Fideicomiso</a>
+            <a href="#pagos" data-view="pagos">Portal de Pagos</a>
+          </div>
+        </div>
+      </nav>
+    </aside>
+
+    <main id="contenido">
+      <div class="view view-home active" id="view-home">
+        <section class="hero" aria-roledescription="carrusel" aria-label="Campañas">
+          <div class="slides">
+            <article class="slide">
+              <div>
+                <p class="kicker">Tu cuenta</p>
+                <h2>Solo con tu cédula</h2>
+                <p>Si buscas independencia financiera, abre tu Cuenta Corriente Simplificada y disfruta comisión 0 en algunas transacciones.</p>
+                <button class="pill pill-blue" type="button" data-view="cliente">Hazte Cliente <i>→</i></button>
+              </div>
+              <img src="assets/hero-cuenta.webp" alt="Persona mostrando su cédula para abrir la cuenta">
+            </article>
+            <article class="slide">
+              <div>
+                <p class="kicker">Puntos de Venta Mercantil</p>
+                <h2>Impulsa tu emprendimiento</h2>
+                <p>Te ofrecemos seguridad, rapidez y una cuota de mantenimiento competitiva diseñada para tu comodidad.</p>
+                <button class="pill pill-blue" type="button" data-view="pos">Solicítalo ya <i>→</i></button>
+              </div>
+              <img src="assets/hero-pos.webp" alt="Punto de venta Mercantil">
+            </article>
+            <article class="slide">
+              <div>
+                <p class="kicker">Tecnología que te acompaña</p>
+                <h2>Paga sin contacto</h2>
+                <p>Solicita tu nueva Tarjeta de Débito Mastercard Mercantil y vive la comodidad de pagos rápidos y prácticos.</p>
+                <button class="pill pill-blue" type="button" data-view="tarjetas">Solicítala ya <i>→</i></button>
+              </div>
+              <img src="assets/hero-debito.webp" alt="Tarjeta de débito Mastercard Mercantil">
+            </article>
+            <article class="slide">
+              <div>
+                <p class="kicker">Portal de Pagos Mercantil</p>
+                <h2>¡Es para todos!</h2>
+                <p>En donde puedes pagar servicios públicos y privados, además de enviar divisas sin ser cliente nuestro.</p>
+                <button class="pill pill-blue" type="button" data-view="pagos">Comienza ya <i>→</i></button>
+              </div>
+              <img src="assets/hero-pagos.webp" alt="Portal de Pagos">
+            </article>
+          </div>
+          <button class="slider-btn prev" type="button" aria-label="Anterior">‹</button>
+          <button class="slider-btn next" type="button" aria-label="Siguiente">›</button>
+          <div class="dots">
+            <button type="button" aria-label="Campaña 1" aria-current="true"></button>
+            <button type="button" aria-label="Campaña 2"></button>
+            <button type="button" aria-label="Campaña 3"></button>
+            <button type="button" aria-label="Campaña 4"></button>
+          </div>
+        </section>
+
+        <form class="finder" id="finder">
+          <label class="sr" for="q">Buscar</label>
+          <input id="q" type="search" placeholder="¿Qué estás buscando?" autocomplete="off">
+          <div class="results" id="results" hidden></div>
+        </form>
+
+        <section class="quick" aria-label="Accesos">
+          <button type="button" data-view="cuentas"><span>CC</span>Cuenta Corriente Simplificada</button>
+          <button type="button" data-view="pos"><span>POS</span>Punto de Venta</button>
+          <button type="button" data-view="tarjetas"><span>TD</span>Débito Mastercard</button>
+          <button type="button" data-view="pagos"><span>PP</span>Portal de Pagos</button>
+          <button type="button" data-view="creditos"><span>CV</span>Crédito Social de Vivienda</button>
+        </section>
+
+        <section class="conoce">
+          <p class="kicker">Conoce</p>
+          <h2>Una nueva sección para ti</h2>
+          <p>Explora información valiosa, consejos prácticos y programas educativos para tus finanzas personales y de negocio.</p>
+          <div class="cards">
+            <article>
+              <h3>Lo mejor en innovación financiera</h3>
+              <p>Paga acercando tu Tarjeta de Débito Mastercard Mercantil. La tecnología contactless evita el contacto físico en cada compra.</p>
+              <button type="button" data-view="tarjetas">Ver la tarjeta</button>
+            </article>
+            <article>
+              <h3>Mercantil lanza su nueva tarjeta de débito</h3>
+              <p>Cámbiala y paga más rápido en comercios y transporte.</p>
+              <button type="button" data-view="tarjetas">Cámbiala ya</button>
+            </article>
+            <article>
+              <h3>¿Cómo prevenir amenazas cibernéticas?</h3>
+              <p>Dónde enfocar tus esfuerzos y cómo resguardar tus datos bancarios.</p>
+              <button type="button" data-view="seguridad">Leer consejos</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="aprende">
+          <div class="aprende-head">
+            <h2>Aprende con Mercantil</h2>
+            <p>Información, tutoriales y pasos cortos para gestionar tus requerimientos.</p>
+          </div>
+          <div class="cards three">
+            <button type="button" data-view="divisas"><small>Envío de Divisas</small>¿Cómo puedes recibir dinero desde el exterior?</button>
+            <button type="button" data-view="seguridad"><small>Seguridad</small>¿Cómo prevenir los fraudes electrónicos?</button>
+            <button type="button" data-view="pagos"><small>Pago de servicios</small>¿Cómo pagar tu recibo de electricidad?</button>
+          </div>
+        </section>
+
+        <section class="juntos">
+          <div>
+            <p class="kicker light">Empecemos juntos</p>
+            <h2>En Mercantil tu presente y futuro están en buenas manos</h2>
+            <p>Estamos aquí para apoyarte y acompañarte a crecer. ¿Estás listo para comenzar?</p>
+          </div>
+          <div class="juntos-card">
+            <strong>¡Únete a nosotros!</strong>
+            <p>Somos tu socio estratégico en cada paso.</p>
+            <button class="pill pill-orange" type="button" data-view="cliente">Hazte cliente <i>↗</i></button>
+          </div>
+        </section>
+      </div>
+
+      <section class="view page" id="view-cuentas" hidden>
+        <p class="crumb">Productos / Cuentas</p>
+        <h1>Cuentas</h1>
+        <p class="lead">La Cuenta Corriente Simplificada se abre solo con la cédula y deja algunas transacciones en comisión 0.</p>
+        <div class="grid">
+          <button type="button" data-modal data-title="Cuenta Corriente Simplificada" data-text="Se abre con la cédula vigente. Incluye débito y canales digitales. Algunas transacciones tienen comisión 0 según el tarifario vigente.">Corriente simplificada<span>Solo con tu cédula</span></button>
+          <button type="button" data-modal data-title="Cuenta de ahorro" data-text="Para reservar y usar el saldo del día a día, con tarjeta de débito y Mercantil en Línea.">Ahorro<span>Reserva y uso diario</span></button>
+          <button type="button" data-modal data-title="Cuenta en divisas" data-text="Recibe y conserva divisas según la normativa y los recaudos que publique el banco.">Divisas<span>Recibe desde el exterior</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-tarjetas" hidden>
+        <p class="crumb">Productos / Tarjetas</p>
+        <h1>Tarjetas</h1>
+        <p class="lead">La nueva débito Mastercard Mercantil paga sin contacto: acercas la tarjeta y listo.</p>
+        <div class="grid">
+          <button type="button" data-modal data-title="Débito Mastercard Mercantil" data-text="Tarjeta contactless ligada a tu cuenta. Sirve en comercios y cajeros. El banco no pide la clave por mensaje.">Débito Mastercard<span>Paga sin contacto</span></button>
+          <button type="button" data-modal data-title="Tarjeta de crédito" data-text="Cupo sujeto a evaluación. El nivel y la tasa se informan antes de firmar el contrato.">Crédito<span>Cupo según tu perfil</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-creditos" hidden>
+        <p class="crumb">Productos / Créditos</p>
+        <h1>Créditos</h1>
+        <div class="banner">
+          <h2>Crédito Social de Vivienda</h2>
+          <p>Financiamiento para la vivienda, con recaudos, plazo y tasa que el banco publica en el tarifario vigente.</p>
+        </div>
+        <div class="grid">
+          <button type="button" data-modal data-title="Crédito Social de Vivienda" data-text="Destinado a la solución habitacional. Pide cédula, ingresos y los recaudos del inmueble. Esta ficha no aprueba solicitudes.">Vivienda<span>Para tu hogar</span></button>
+          <button type="button" data-modal data-title="Crédito personal" data-text="Efectivo para un gasto previsto, abonado en cuenta y pagado en cuotas, si la evaluación lo permite.">Personal<span>Efectivo en cuotas</span></button>
+          <button type="button" data-modal data-title="Crédito para emprender" data-text="Capital de trabajo para un negocio formalizado. El monto depende de los ingresos y de la garantía.">Emprender<span>Inventario o equipo</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-divisas" hidden>
+        <p class="crumb">Productos / Envío de Divisas</p>
+        <h1>Envío de Divisas</h1>
+        <p class="lead">Puedes recibir dinero desde el exterior por los corredores habilitados. El nombre y el documento deben coincidir con el envío.</p>
+        <div class="note">En la maqueta no se opera ni se cotiza la tasa del día. Ese valor está en el tablero oficial de Mercantil.</div>
+      </section>
+
+      <section class="view page" id="view-pos" hidden>
+        <p class="crumb">Productos / Puntos de venta</p>
+        <h1>Punto de venta</h1>
+        <p class="lead">Cobra con tarjeta en tu negocio, con una cuota de mantenimiento pensada para el emprendimiento.</p>
+        <div class="note">La solicitud real se hace por los canales oficiales. Aquí solo se muestra el recorrido de la presentación.</div>
+      </section>
+
+      <section class="view page" id="view-inversiones" hidden>
+        <p class="crumb">Productos / Inversiones</p>
+        <h1>Inversiones</h1>
+        <p class="lead">Instrumentos para colocar un excedente según el plazo y la normativa vigente. La tasa no se publica en esta maqueta.</p>
+      </section>
+
+      <section class="view page" id="view-fideicomiso" hidden>
+        <p class="crumb">Productos / Fideicomisos</p>
+        <h1>Fideicomisos</h1>
+        <p class="lead">Administración de un patrimonio con un fin definido, bajo contrato: garantía, administración o un proyecto.</p>
+      </section>
+
+      <section class="view page" id="view-pagos" hidden>
+        <p class="crumb">Portal de Pagos</p>
+        <h1>Portal de Pagos</h1>
+        <p class="lead">Paga servicios públicos y privados, y envía divisas, incluso si todavía no eres cliente.</p>
+        <div class="grid">
+          <button type="button" data-modal data-title="Servicios" data-text="Electricidad, agua, telefonía y otros recaudos publicados en el portal. En la maqueta el pago no se ejecuta.">Servicios<span>Públicos y privados</span></button>
+          <button type="button" data-modal data-title="Divisas" data-text="El portal también informa el envío de divisas. La operación real ocurre en el sitio oficial.">Divisas<span>Sin ser cliente</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-digital" hidden>
+        <p class="crumb">Servicios digitales</p>
+        <h1>Servicios digitales</h1>
+        <div class="grid">
+          <button type="button" data-view="banca">Mercantil en Línea<span>Consultas, pagos y transferencias</span></button>
+          <button type="button" data-modal data-title="App Mercantil" data-text="La aplicación reúne consultas, pagos y la clave dinámica. Se descarga desde las tiendas oficiales.">App Mercantil<span>El banco en el teléfono</span></button>
+          <button type="button" data-modal data-title="Pago móvil" data-text="Envía y recibe bolívares con el teléfono afiliado. Revisa el límite del día antes de operar.">Pago móvil<span>Al instante</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-empresas" hidden>
+        <p class="crumb">Empresas</p>
+        <h1>Mercantil Empresas</h1>
+        <p class="lead">Punto de venta, nómina y fideicomiso para cobrar y pagar con el control de la compañía.</p>
+        <div class="grid">
+          <button type="button" data-view="pos">Punto de venta<span>Cobra con tarjeta</span></button>
+          <button type="button" data-modal data-title="Nómina" data-text="Pago de sueldos a las cuentas de los trabajadores, con archivo y comprobante.">Nómina<span>Sueldos en lote</span></button>
+          <button type="button" data-view="fideicomiso">Fideicomiso<span>Patrimonio con un fin</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-conoce" hidden>
+        <p class="crumb">Conoce</p>
+        <h1>Aprende con Mercantil</h1>
+        <p class="lead">Tutoriales cortos para recibir divisas, cuidar tus claves y pagar servicios.</p>
+        <div class="grid">
+          <button type="button" data-view="divisas">Divisas<span>Recibir dinero del exterior</span></button>
+          <button type="button" data-view="seguridad">Seguridad<span>Fraudes electrónicos</span></button>
+          <button type="button" data-view="pagos">Servicios<span>El recibo de electricidad</span></button>
+        </div>
+      </section>
+
+      <section class="view page" id="view-seguridad" hidden>
+        <p class="crumb">Ciberseguridad</p>
+        <h1>Protege tus datos</h1>
+        <div class="grid">
+          <article class="tip"><h2>La clave es tuya</h2><p>Mercantil no pide la clave completa ni el token por mensaje, llamada o redes.</p></article>
+          <article class="tip"><h2>Escribe la dirección</h2><p>Entra a Mercantil en Línea desde el sitio oficial, no desde un enlace recibido.</p></article>
+          <article class="tip"><h2>Contactless a la vista</h2><p>Acerca la tarjeta tú mismo y no la pierdas de vista en el punto de venta.</p></article>
+        </div>
+      </section>
+
+      <section class="view page" id="view-oficinas" hidden>
+        <p class="crumb">Información / Red de oficinas</p>
+        <h1>Oficinas y cajeros</h1>
+        <p class="lead">Zonas de ejemplo para la presentación. Direcciones y horarios están en el sitio oficial.</p>
+        <div class="grid">
+          <article class="tip"><h2>Caracas</h2><p>Oficinas y cajeros del área metropolitana.</p></article>
+          <article class="tip"><h2>Zulia</h2><p>Maracaibo y la costa occidental.</p></article>
+          <article class="tip"><h2>Carabobo</h2><p>Valencia y la región central.</p></article>
+        </div>
+      </section>
+
+      <section class="view page" id="view-tasas" hidden>
+        <p class="crumb">Información / Tasas</p>
+        <h1>Tasas y límites</h1>
+        <p class="lead">La maqueta no publica la tasa del día.</p>
+        <div class="grid">
+          <article class="tip"><h2>Mesa de cambio</h2><p>USD — · EUR —</p></article>
+          <article class="tip"><h2>Límites electrónicos</h2><p>Pago móvil — · Transferencia —</p></article>
+          <article class="tip"><h2>Tarifas</h2><p>Consulta el tarifario oficial.</p></article>
+        </div>
+      </section>
+
+      <section class="view page" id="view-prensa" hidden>
+        <p class="crumb">Sala de prensa</p>
+        <h1>Sala de prensa</h1>
+        <article class="tip"><h2>Nueva tarjeta de débito</h2><p>El home anuncia la débito Mastercard contactless y la invitación a cambiarla.</p></article>
+      </section>
+
+      <section class="view page" id="view-ayuda" hidden>
+        <p class="crumb">Centro de Atención</p>
+        <h1>Centro de Atención Mercantil</h1>
+        <p class="lead">El formulario se queda en esta pantalla. No sale del navegador.</p>
+        <form class="form" id="contact-form">
+          <label>Nombre <input name="nombre" required></label>
+          <label>Correo <input type="email" name="correo" required></label>
+          <label>Mensaje <textarea name="mensaje" rows="4" required></textarea></label>
+          <button class="pill pill-blue" type="submit">Enviar</button>
+          <p class="ok" id="contact-note" hidden>Listo. El mensaje no se envió a ningún servidor.</p>
+        </form>
+      </section>
+
+      <section class="view page" id="view-cliente" hidden>
+        <p class="crumb">Hazte cliente</p>
+        <h1>Hazte cliente</h1>
+        <p class="lead">Para la Cuenta Corriente Simplificada tienes a la mano la cédula. Esta solicitud es de muestra.</p>
+        <form class="form" id="cliente-form">
+          <label>Nombre <input required></label>
+          <label>Cédula <input required></label>
+          <label>Teléfono <input required></label>
+          <button class="pill pill-orange" type="submit">Quiero ser cliente</button>
+          <p class="ok" id="cliente-note" hidden>Solicitud de muestra registrada solo en esta pantalla.</p>
+        </form>
+      </section>
+
+      <section class="view page" id="view-banca" hidden>
+        <form class="login" id="login-form">
+          <img src="assets/logo-100.svg" alt="Mercantil">
+          <h1>Mercantil en Línea</h1>
+          <p>Acceso de demostración</p>
+          <label>Usuario <input autocomplete="off" required></label>
+          <label>Clave <input type="password" autocomplete="off" required></label>
+          <button class="pill pill-blue" type="submit">Ingresar</button>
+          <p class="ok" id="login-note" hidden>La clave no se envió ni se guardó. El ingreso real es solo en el portal oficial.</p>
+        </form>
+      </section>
+
+      <footer class="footer">
+        <div class="foot-grid">
+          <div>
+            <h2>Acerca de Mercantil</h2>
+            <a href="#prensa" data-view="prensa">Historia y misión</a>
+            <a href="#prensa" data-view="prensa">Reconocimientos</a>
+            <a href="#seguridad" data-view="seguridad">Código de Ética</a>
+            <a href="#seguridad" data-view="seguridad">Prevención LC/FT y FPADM</a>
+          </div>
+          <div>
+            <h2>Conoce</h2>
+            <a href="#conoce" data-view="conoce">Aprende con Mercantil</a>
+            <a href="#seguridad" data-view="seguridad">Ciberseguridad</a>
+            <a href="#prensa" data-view="prensa">Sala de prensa</a>
+            <button type="button" id="open-mia-foot">Mercantil Inteligencia Artificial</button>
+          </div>
+          <div>
+            <h2>Información</h2>
+            <a href="#ayuda" data-view="ayuda">Centro de Atención</a>
+            <a href="#oficinas" data-view="oficinas">Red de oficinas</a>
+            <a href="#oficinas" data-view="oficinas">Cajeros automáticos</a>
+            <a href="#ayuda" data-view="ayuda">Reclamos</a>
+            <a href="#ayuda" data-view="ayuda">Defensoría del cliente</a>
+          </div>
+          <div>
+            <h2>Tasas</h2>
+            <a href="#tasas" data-view="tasas">Tasas</a>
+            <a href="#tasas" data-view="tasas">Tarifas y comisiones</a>
+            <a href="#tasas" data-view="tasas">Tasa mesa de cambio</a>
+            <a href="#tasas" data-view="tasas">Límites electrónicos</a>
+            <a href="#oficinas" data-view="oficinas">Calendario</a>
+          </div>
+        </div>
+        <p class="legal">Maqueta de presentación · Mercantil C.A., Banco Universal. RIF J-00002961-0. No es el sitio oficial y no realiza operaciones.</p>
+      </footer>
+    </main>
+  </div>
+
+  <section class="mia-panel" hidden aria-label="Chat MIA">
+    <header>
+      <strong>MIA</strong>
+      <span>Asistente de la maqueta</span>
+      <button type="button" class="mia-close" aria-label="Cerrar">×</button>
+    </header>
+    <div class="mia-log" id="mia-log"></div>
+    <form id="mia-form">
+      <label class="sr" for="mia-q">Mensaje</label>
+      <input id="mia-q" placeholder="Escribe tu pregunta" autocomplete="off">
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <div class="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" type="button" aria-label="Cerrar">×</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
