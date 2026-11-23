@@ -256,8 +256,6 @@
 
   document.querySelector("#login-form").addEventListener("submit", function (event) {
     event.preventDefault();
-    var note = document.querySelector("#login-note");
-    note.hidden = false;
     event.currentTarget.reset();
   });
 
