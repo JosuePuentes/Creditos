@@ -801,6 +801,8 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
+.dani-panel[hidden] { display: none !important; }
+
 .dani-panel header {
   display: flex;
   align-items: center;
