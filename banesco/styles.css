@@ -12,10 +12,12 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   color: var(--ink);
   background: #fff;
   font-family: Poppins, "Segoe UI", sans-serif;
@@ -284,13 +286,16 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   background: var(--green);
   overflow: hidden;
+  max-width: 100%;
 }
 
-.slides { display: flex; transition: transform 0.55s ease; }
+.slides { display: flex; width: 100%; transition: transform 0.55s ease; }
 
 .slide {
   position: relative;
-  min-width: 100%;
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
   height: 450px;
   display: flex;
   align-items: center;
@@ -926,13 +931,18 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 680px) {
-  .promo-bar { flex-direction: column; padding: 10px 36px; }
+  .promo-bar { flex-direction: column; align-items: stretch; padding: 10px 16px; text-align: center; }
+  .promo-bar p { max-width: 100%; }
   .banca-btn { display: none; }
+  .mega { position: static; max-height: 62vh; overflow: auto; }
   .mega-grid, #menu-empresas .mega-grid, .short-grid, .product-grid, .zone-grid, .rate-table, .footer-grid, .story-row {
     grid-template-columns: 1fr;
   }
-  .slide { height: 460px; }
-  .slide-copy { width: min(100% - 24px, 520px); }
+  .slide { height: 430px; }
+  .slide-copy { width: auto; padding: 16px 54px 64px; }
+  .slider-btn { top: auto; bottom: 78px; }
+  .assist-card { padding: 22px 88px 18px 20px; }
+  .finder, .finder input { width: 100%; font-size: 16px; }
   .slide img { object-position: center top; opacity: 0.28; }
   .slide-awards { background: #003b2e; }
   .slide-ticket { background: #08543c; }
