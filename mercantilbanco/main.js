@@ -205,7 +205,10 @@
       form.reset();
     });
   }
-  demo(document.querySelector("#login-form"), "#login-note");
+  document.querySelector("#login-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    event.currentTarget.reset();
+  });
   demo(document.querySelector("#contact-form"), "#contact-note");
   demo(document.querySelector("#cliente-form"), "#cliente-note");
 
