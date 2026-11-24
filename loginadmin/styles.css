@@ -24,6 +24,8 @@ html, body {
   box-shadow: 0 24px 60px rgba(4, 16, 36, 0.28);
 }
 
+.panel, .top { width: min(960px, calc(100% - 32px)); }
+
 .card { padding: 28px 24px; }
 
 .eyebrow {
@@ -89,7 +91,6 @@ button:hover { background: #0f2744; }
 }
 
 .top {
-  width: min(920px, calc(100% - 32px));
   margin: 24px auto 16px;
   padding: 22px 24px;
   display: flex;
@@ -108,9 +109,60 @@ button:hover { background: #0f2744; }
 .top button:hover { background: #d7e2f2; }
 
 .panel {
-  width: min(920px, calc(100% - 32px));
   margin: 0 auto 32px;
   padding: 24px;
+}
+
+.module {
+  margin-bottom: 28px;
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  background: #f8fafc;
+}
+
+.module-head h2 {
+  margin: 0 0 4px;
+  font-size: 20px;
+  color: #0f2744;
+}
+
+.module-head p {
+  margin: 0 0 14px;
+  color: #5b6b82;
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e8eef5;
+  vertical-align: top;
+}
+
+th {
+  background: #16345a;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+
+td { font-size: 14px; color: #243447; }
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  background: #eef3fa;
+  padding: 2px 6px;
+  border-radius: 6px;
 }
 
 .grid {

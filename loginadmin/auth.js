@@ -5,6 +5,33 @@
     clave: "Cr3ditos#Admin26"
   };
 
+  var TEST_ACCOUNTS = [
+    {
+      banco: "Login Admin",
+      usuario: "superadmin",
+      clave: "Cr3ditos#Admin26",
+      nota: "Super admin de este módulo"
+    },
+    {
+      banco: "Banco de Venezuela · BDVenlínea",
+      usuario: "demo.bdv",
+      clave: "PruebaBDV26",
+      nota: "Usuario de demostración"
+    },
+    {
+      banco: "Banesco · BanescOnline",
+      usuario: "demo.banesco",
+      clave: "PruebaBan26",
+      nota: "Usuario de demostración"
+    },
+    {
+      banco: "Mercantil · Mercantil en Línea",
+      usuario: "demo.mercantil",
+      clave: "PruebaMer26",
+      nota: "Usuario de demostración"
+    }
+  ];
+
   function login(usuario, clave) {
     if (usuario === SUPER_ADMIN.usuario && clave === SUPER_ADMIN.clave) {
       sessionStorage.setItem(KEY, JSON.stringify({
@@ -40,10 +67,15 @@
     }
   }
 
+  function testAccounts() {
+    return TEST_ACCOUNTS.slice();
+  }
+
   global.CreditosAuth = {
     login: login,
     logout: logout,
     isLoggedIn: isLoggedIn,
-    currentUser: currentUser
+    currentUser: currentUser,
+    testAccounts: testAccounts
   };
 })(window);
