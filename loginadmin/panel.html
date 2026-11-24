@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/loginadmin/">
+  <title>Módulo Admin</title>
+  <link rel="stylesheet" href="/loginadmin/styles.css?v=1">
+</head>
+<body>
+  <script src="/loginadmin/auth.js?v=1"></script>
+  <script>
+    if (!window.CreditosAuth || !CreditosAuth.isLoggedIn()) {
+      location.replace("/loginadmin/");
+    }
+  </script>
+
+  <header class="top">
+    <div>
+      <p class="eyebrow">Créditos · Super Admin</p>
+      <h1>Módulo administrador</h1>
+    </div>
+    <button type="button" id="logout">Cerrar sesión</button>
+  </header>
+
+  <main class="panel">
+    <p class="lead">Sesión activa. Abre la maqueta que necesites presentar.</p>
+    <div class="grid">
+      <a href="/bancodevenezuela/">
+        <strong>Banco de Venezuela</strong>
+        <span>Home de presentación</span>
+      </a>
+      <a href="/banesco/">
+        <strong>Banesco</strong>
+        <span>Home de presentación</span>
+      </a>
+      <a href="/mercantilbanco/">
+        <strong>Mercantil Banco</strong>
+        <span>Home de personas</span>
+      </a>
+      <a href="/bancodevenezuela/banca.html">
+        <strong>BDVenlínea</strong>
+        <span>Pantalla de ingreso BDV</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    document.querySelector("#logout").addEventListener("click", function () {
+      CreditosAuth.logout();
+      location.href = "/loginadmin/";
+    });
+  </script>
+</body>
+</html>

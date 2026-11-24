@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/loginadmin/">
+  <title>Login Admin</title>
+  <link rel="stylesheet" href="/loginadmin/styles.css?v=1">
+</head>
+<body>
+  <main class="shell">
+    <form class="card" id="login-form" autocomplete="off">
+      <p class="eyebrow">Créditos</p>
+      <h1>Acceso administrador</h1>
+      <p class="lead">Ingresa con el usuario super admin para abrir el módulo.</p>
+
+      <label>
+        Usuario
+        <input id="usuario" name="usuario" type="text" required autocomplete="username">
+      </label>
+      <label>
+        Clave
+        <input id="clave" name="clave" type="password" required autocomplete="current-password">
+      </label>
+
+      <p class="err" id="err" hidden>Usuario o clave incorrectos.</p>
+      <button type="submit">Entrar</button>
+    </form>
+  </main>
+  <script src="/loginadmin/auth.js?v=1"></script>
+  <script>
+    (function () {
+      if (window.CreditosAuth && CreditosAuth.isLoggedIn()) {
+        location.replace("/loginadmin/panel.html");
+        return;
+      }
+      var form = document.querySelector("#login-form");
+      var err = document.querySelector("#err");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        var user = document.querySelector("#usuario").value.trim();
+        var pass = document.querySelector("#clave").value;
+        if (CreditosAuth.login(user, pass)) {
+          location.href = "/loginadmin/panel.html";
+          return;
+        }
+        err.hidden = false;
+        document.querySelector("#clave").value = "";
+        document.querySelector("#clave").focus();
+      });
+    })();
+  </script>
+</body>
+</html>

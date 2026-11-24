@@ -5,6 +5,7 @@
   "redirects": [
     { "source": "/banesco", "destination": "/banesco/", "permanent": false },
     { "source": "/mercantilbanco", "destination": "/mercantilbanco/", "permanent": false },
-    { "source": "/bancodevenezuela", "destination": "/bancodevenezuela/", "permanent": false }
+    { "source": "/bancodevenezuela", "destination": "/bancodevenezuela/", "permanent": false },
+    { "source": "/loginadmin", "destination": "/loginadmin/", "permanent": false }
   ]
 }
